@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - Addriyan Bagus Syahputra | IoT & Embedded Systems Developer | D4 Teknik Listrik UNESA | Sertifikasi BNSP Teknisi Embedded System.">
+    <meta name="keywords" content="Addriyan Bagus Syahputra, IoT Developer, ESP32, Arduino, Embedded Systems, Portfolio, UNESA, BNSP">
+    <meta name="author" content="Addriyan Bagus Syahputra">
+    <title>Addriyan Bagus Syahputra | IoT & Embedded Systems Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Portfolio<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+                <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Terbuka untuk Kesempatan Kerja (Open to Work)
+            </div>
+            <h1 class="hero-title">
+                Halo, Saya<br>
+                <span class="hero-name" id="typedName"></span>
+                <span class="cursor-blink">|</span>
+            </h1>
+            <p class="hero-subtitle">
+                <span class="highlight">Electrical & IoT Engineer</span> | <span class="highlight">System Protection Specialist</span><br>
+                Lulusan D4 Teknik Listrik UNESA (IPK 3.80 / 4.00 - Predikat Cumlaude) dengan spesialisasi pada sistem proteksi beban kelistrikan, otomatisasi industri, serta integrasi teknologi IoT.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number stat-ipk" data-count="38">3.80</span>
+                    <span class="stat-label">IPK (Cumlaude)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="6">0</span>
+                    <span class="stat-label">Trainer Kit & Proyek</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-label">Pengalaman Industri</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Lihat Proyek
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Hubungi Saya
+                </a>
+                <a href="https://drive.google.com/drive/folders/1AusyKe0fTmg40IVT188b3f9opXk1rp9j?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" id="downloadCV">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download CV
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="circuit-board">
+                <div class="chip">
+                    <div class="chip-body">
+                        <span class="chip-label">ESP32</span>
+                        <div class="chip-led active"></div>
+                    </div>
+                    <div class="chip-pins left"></div>
+                    <div class="chip-pins right"></div>
+                </div>
+                <div class="circuit-lines">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                    <div class="line line-4"></div>
+                </div>
+                <div class="data-flow">
+                    <div class="data-packet" style="--delay: 0s; --path: 1;"></div>
+                    <div class="data-packet" style="--delay: 1s; --path: 2;"></div>
+                    <div class="data-packet" style="--delay: 2s; --path: 3;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll ke bawah</span>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;tentang-saya&gt;</span>
+                <h2 class="section-title">Profil Profesional</h2>
+                <p class="section-desc">Mengenal lebih dekat tentang latar belakang teknis dan spesialisasi saya</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-avatar">
+                    <div class="avatar-frame">
+                        <img src="foto.png" alt="Addriyan Bagus Syahputra" class="avatar-img">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar-dots">
+                            <span style="--i:1"></span>
+                            <span style="--i:2"></span>
+                            <span style="--i:3"></span>
+                            <span style="--i:4"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3 class="about-name">Addriyan Bagus Syahputra</h3>
+                    <p class="about-role">Electrical & IoT Engineer | System Protection Specialist</p>
+                    <p class="about-text">
+                        Lulusan <strong>S1/D4 Teknik Listrik Universitas Negeri Surabaya (IPK 3.80 / 4.00 - Predikat Cumlaude)</strong> 
+                        yang proaktif dan berorientasi pada hasil (<em>result-oriented</em>), dengan spesialisasi pada <strong>sistem proteksi beban kelistrikan</strong>, 
+                        <strong>otomatisasi industri</strong>, serta <strong>integrasi teknologi IoT (Internet of Things)</strong>.
+                    </p>
+                    <p class="about-text">
+                        Berpengalaman praktis dalam merakit modul <strong>Educational Trainer Kit</strong> (PLC, Pneumatik, Panel Surya, AC, IoT) 
+                        serta pemeliharaan dan perbaikan (<em>preventive & corrective maintenance</em>) sistem kontrol otomatis relay industri dan alat pengangkut berat (<strong>Overhead Hoist Crane</strong>).
+                    </p>
+                    <p class="about-text">
+                        Memiliki jiwa pembelajar otodidak (<em>self-taught</em>) tinggi dengan memanfaatkan AI terkini (Prompt Engineering) untuk efisiensi pemrograman IoT, pengolahan data analitis, dan pemecahan masalah teknik.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Surabaya, Jawa Timur</span>
+                        </div>
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>0895-1618-4614</span>
+                        </div>
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>addriyanbagus@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            <span>30 Agustus 2002</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;keahlian&gt;</span>
+                <h2 class="section-title">Keahlian Teknis</h2>
+                <p class="section-desc">Teknologi dan tools yang saya kuasai</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Skill Category 1: Kelistrikan & Proteksi -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h3>Kelistrikan & Proteksi</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Sistem Proteksi Beban (Priority Load Shedding)</span>
+                                <span class="skill-level">92%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Wiring Panel Kontrol 1 & 3 Fasa</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Relay Control Systems</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Troubleshooting & Analisis Beban Daya</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2: Otomasi & IoT -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                        </div>
+                        <h3>Otomasi & IoT</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PLC Programming & Modul I/O Assembly</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Mikrokontroler (ESP32, Arduino, C/C++)</span>
+                                <span class="skill-level">92%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node-RED & IoT Sensor Network</span>
+                                <span class="skill-level">86%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="86"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Pneumatik & Elektropneumatik</span>
+                                <span class="skill-level">82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3: Maintenance Industri & Desain -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>Maintenance Industri & Desain</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Preventive & Corrective Maintenance</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Overhead Hoist Crane & Motor Listrik 3 Fasa</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">AutoCAD (Electrical Drafting)</span>
+                                <span class="skill-level">82%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CorelDRAW (Desain Vektor & Dokumentasi)</span>
+                                <span class="skill-level">84%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress" data-width="84"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4: AI, Olah Data & Soft Skills -->
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><polygon points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3>AI, Analisis Data & Soft Skills</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">AI-Assisted IoT</span>
+                        <span class="skill-tag">Microsoft Excel (Complex / Pivot)</span>
+                        <span class="skill-tag">Problem Solving Otodidak</span>
+                        <span class="skill-tag">Quality Control (QC)</span>
+                        <span class="skill-tag">Kalibrasi Komponen</span>
+                        <span class="skill-tag">Manajemen Organisasi</span>
+                        <span class="skill-tag">Komunikasi Teknis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;proyek&gt;</span>
+                <h2 class="section-title">Proyek Unggulan</h2>
+                <p class="section-desc">Beberapa proyek terbaik yang pernah saya kerjakan</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Skripsi / Tugas Akhir UNESA -->
+                <div class="project-card featured">
+                    <div class="project-badge">⭐ Skripsi / Tugas Akhir</div>
+                    <div class="project-visual">
+                        <div class="project-icon-large">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                            <div class="icon-pulse"></div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistem Proteksi Beban Selektif (Priority Load Shedding)</h3>
+                        <p class="project-desc">
+                            Rancang bangun sistem proteksi beban kelistrikan selektif pada instalasi rumah tangga berbasis 
+                            mikrokontroler dan dashboard Node-RED. Menerapkan algoritma <strong>Priority-Based Load Shedding</strong> 
+                            untuk mencegah trip MCB/overload dengan memutus beban daya rendah secara terencana saat konsumsi daya mendekati batas kapasitas.
+                        </p>
+                        <div class="project-tech">
+                            <span>Node-RED Dashboard</span>
+                            <span>Mikrokontroler</span>
+                            <span>Relay Logic</span>
+                            <span>Sensor Arus & Daya</span>
+                            <span>Power System Protection</span>
+                            <span>IoT Network</span>
+                        </div>
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                Priority-Based Load Shedding Otomatis
+                            </div>
+                            <div class="feature-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                Monitoring Konsumsi Daya Real-Time
+                            </div>
+                            <div class="feature-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                Kontrol Relay Proteksi Selektif
+                            </div>
+                            <div class="feature-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                                Dashboard Visual Interaktif Node-RED
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="project-link primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                Detail Skripsi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: PT Datek Inovasi Nusantara -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-icon-large">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Perakitan & QC Educational Trainer Kits</h3>
+                        <p class="project-desc">
+                            Perancangan, perakitan teknis, pengabelan presisi, dan Quality Control (QC) unit trainer kit SMK & Perguruan Tinggi: 
+                            <strong>Trainer PLC</strong>, <strong>Trainer Pneumatik</strong>, <strong>Trainer Panel Surya Photovoltaic</strong>, 
+                            <strong>Trainer AC Pendingin</strong>, dan <strong>Trainer IoT</strong> di PT Datek Inovasi Nusantara.
+                        </p>
+                        <div class="project-tech">
+                            <span>PLC I/O Modul</span>
+                            <span>Elektropneumatik</span>
+                            <span>Solar PV & Inverter</span>
+                            <span>Wiring Panel Presisi</span>
+                            <span>Kalibrasi & QC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#experience" class="project-link primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                Pengalaman Magang 2025
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Smart Hydroponics RTOS -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-icon-large">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Hydroponics System (FreeRTOS & Firebase)</h3>
+                        <p class="project-desc">
+                            Sistem otomasi hidroponik berbasis ESP32 dan FreeRTOS untuk monitoring kualitas air secara real-time. 
+                            Membaca sensor pH terkalibrasi, sensor suhu DS18B20, dan level air serta mengontrol pompa nutrisi secara otomatis 
+                            dengan sinkronisasi data cloud Firebase Realtime Database.
+                        </p>
+                        <div class="project-tech">
+                            <span>ESP32</span>
+                            <span>FreeRTOS</span>
+                            <span>Firebase RTDB</span>
+                            <span>Sensor pH</span>
+                            <span>DS18B20</span>
+                            <span>C++ Embedded</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#experience" class="project-link primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                                Sertifikasi BNSP 2026
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Maintenance Crane CV Perjuangan Steel -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-icon-large">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Overhead Hoist Crane & Relay Maintenance</h3>
+                        <p class="project-desc">
+                            Preventive & corrective maintenance sistem kelistrikan dan mekanis pada <strong>Overhead Hoist Crane</strong> 
+                            (alat katrol pengangkut baja berat industri) di CV Perjuangan Steel. Meliputi inspeksi berkala motor listrik 3 fasa, 
+                            jalur pengabelan daya, serta perbaikan sistem kontrol otomatis berbasis Relay Control Systems.
+                        </p>
+                        <div class="project-tech">
+                            <span>Overhead Hoist Crane</span>
+                            <span>Motor Listrik 3 Fasa</span>
+                            <span>Relay Control Systems</span>
+                            <span>Panel Listrik Pabrik</span>
+                            <span>Troubleshooting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#experience" class="project-link primary">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                Pengalaman Industri 2021
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE & EDUCATION SECTION ============ -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;pengalaman&gt;</span>
+                <h2 class="section-title">Pengalaman & Pendidikan</h2>
+                <p class="section-desc">Perjalanan karir dan pendidikan saya</p>
+            </div>
+            <div class="timeline">
+                <!-- Timeline Item 1: Pendidikan Tinggi -->
+                <div class="timeline-item">
+                <!-- Timeline Item 1: Magang Kuliah PT Datek -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge training">Magang Kuliah (2025)</div>
+                        <h3>Teknisi & Perakit Educational Trainer Kit</h3>
+                        <p class="timeline-place">PT Datek Inovasi Nusantara — Surabaya, Jawa Timur</p>
+                        <p class="timeline-desc">
+                            Merancang, merakit, menguji, dan kalibrasi modul Educational Trainer Kit teknis untuk pembelajaran SMK dan Perguruan Tinggi:
+                        </p>
+                        <ul class="timeline-list">
+                            <li><strong>Trainer PLC:</strong> Perakitan modul I/O PLC, modul simulasi program, dan wiring interkoneksi</li>
+                            <li><strong>Trainer Pneumatik:</strong> Perakitan kompresor, katup solenoid, dan sistem elektropneumatik</li>
+                            <li><strong>Trainer Panel Surya:</strong> Integrasi modul photovoltaic, solar charge controller, dan inverter</li>
+                            <li><strong>Trainer AC & Pendingin:</strong> Perakitan sirkuit refrigerasi dan kontrol kelistrikan pendingin</li>
+                            <li><strong>Trainer IoT:</strong> Integrasi mikrokontroler, modul komunikasi nirkabel, sensor, dan aktuator</li>
+                            <li>Melakukan pengabelan (wiring) kelistrikan presisi, kalibrasi komponen ukur, dan Quality Control (QC)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: Magang SMK CV Perjuangan Steel -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge training">Magang SMK (2021)</div>
+                        <h3>Helper Teknisi & Maintenance Kelistrikan Industri</h3>
+                        <p class="timeline-place">CV Perjuangan Steel — Surabaya, Jawa Timur</p>
+                        <p class="timeline-desc">
+                            Melakukan pemeliharaan rutin dan perbaikan sistem kelistrikan pada fasilitas industri pabrik baja:
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Preventive & corrective maintenance serta perbaikan mekanis dan kelistrikan pada <strong>Overhead Hoist Crane</strong> (katrol pengangkut baja berat)</li>
+                            <li>Membantu merakit, menguji, dan merawat sistem kontrol otomatis berbasis <strong>Relay Control Systems</strong></li>
+                            <li>Inspeksi rutin berkala pada komponen panel listrik pabrik, kontaktor proteksi, motor listrik 3 fasa, dan kabel daya</li>
+                            <li>Troubleshooting gangguan kelistrikan secara cepat untuk meminimalkan *downtime* produksi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: Sertifikasi BNSP & BLK -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge certificate">Sertifikasi BNSP (2026)</div>
+                        <h3>Teknisi Embedded System (Microcontroller) Gelombang 5</h3>
+                        <p class="timeline-place">BNSP & Balai Latihan Kerja (BLK) — Surabaya, Jawa Timur</p>
+                        <p class="timeline-desc">
+                            Pelatihan intensif dan sertifikasi kompetensi nasional embedded system:
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Pengembangan sistem berbasis mikrokontroler ESP32 & Arduino C++</li>
+                            <li>Integrasi sensor suhu, kelembaban, asap, air, dan cahaya</li>
+                            <li>Proyek akhir implementasi: Smart Hydroponics System berbasis IoT & Cloud</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4: Pendidikan Tinggi UNESA -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge education">2022 — 2026</div>
+                        <h3>S1 / D4 Teknik Listrik (IPK: 3.80 / 4.00 - Cumlaude)</h3>
+                        <p class="timeline-place">Universitas Negeri Surabaya (UNESA)</p>
+                        <p class="timeline-desc">
+                            <strong>Skripsi:</strong> "Rancang Bangun Sistem Proteksi Beban Selektif pada Rumah Tangga Menggunakan Node-RED dengan Metode Priority-Based Load Shedding"
+                        </p>
+                        <p class="timeline-desc">
+                            <strong>Fokus Keahlian:</strong> Power System Protection, Microcontroller & Relay Logic, PLC Programming, Sensor Network IoT, Maintenance Kelistrikan, dan Analisis Beban Daya.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5: SMK Negeri 5 Surabaya -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge education">2018 — 2022</div>
+                        <h3>Teknik Instalasi Tenaga Listrik (TITL)</h3>
+                        <p class="timeline-place">SMK Negeri 5 Surabaya</p>
+                        <p class="timeline-desc">
+                            Menguasai dasar-dasar teknik listrik, instalasi penerangan & tenaga, wiring panel kontrol 1 fasa & 3 fasa, serta maintenance dan perbaikan alat kelistrikan industri.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6: Pengalaman Organisasi -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge education">Organisasi & Kepemimpinan</div>
+                        <h3>Pengalaman Organisasi Kampus</h3>
+                        <div class="certificate-grid">
+                            <div class="cert-item">
+                                <div class="cert-icon">📊</div>
+                                <div>
+                                    <strong>Kepala Divisi Data & Sistem Informasi</strong>
+                                    <span>PKM Center Universitas Negeri Surabaya (UNESA) — Mengelola basis data seleksi proposal & dashboard analisis data terstruktur.</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon">👥</div>
+                                <div>
+                                    <strong>Wakil Ketua Tim KKN UNESA</strong>
+                                    <span>Kuliah Kerja Nyata UNESA — Mengordinasikan perancangan program kerja pengabdian masyarakat dan komunikasi instansi desa.</span>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon">📝</div>
+                                <div>
+                                    <strong>Pengurus UKIM UNESA</strong>
+                                    <span>Unit Kegiatan Ilmiah Mahasiswa UNESA — Riset ilmiah, penyusunan KTI, ESSAY, dan workshop keilmuan kampus.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;kontak&gt;</span>
+                <h2 class="section-title">Hubungi Saya</h2>
+                <p class="section-desc">Tertarik untuk berkolaborasi? Jangan ragu untuk menghubungi saya</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>addriyanbagus@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>WhatsApp / Telepon</h4>
+                            <p>+62 895-1618-4614</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Lokasi</h4>
+                            <p>Surabaya, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://wa.me/6289516184614" target="_blank" class="social-link" aria-label="WhatsApp" title="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="mailto:addriyanbagus@gmail.com" class="social-link" aria-label="Email" title="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subjek pesan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Kirim Pesan via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Portfolio<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">
+                    Dibuat dengan ❤️ dan banyak ☕ — © 2026 All rights reserved.
+                </p>
+                <div class="footer-links">
+                    <a href="#hero">Beranda</a>
+                    <a href="#about">Tentang</a>
+                    <a href="#projects">Proyek</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ BACK TO TOP ============ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
